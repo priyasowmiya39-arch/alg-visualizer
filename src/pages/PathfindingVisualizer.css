@@ -1,0 +1,108 @@
+.pathfinding-visualizer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.pathfinding-visualizer h1 {
+  text-align: center;
+  color: #646cff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls select,
+.controls button {
+  padding: 0.6rem 1.2rem;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.controls select:hover:not(:disabled),
+.controls button:hover:not(:disabled) {
+  background-color: #646cff;
+  border-color: #646cff;
+}
+
+.controls select:disabled,
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.legend {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #3a3a3a;
+}
+
+.legend-color.start {
+  background-color: #51cf66;
+}
+
+.legend-color.end {
+  background-color: #ff6b6b;
+}
+
+.legend-color.wall {
+  background-color: #1a1a1a;
+}
+
+.legend-color.visited {
+  background-color: #74c0fc;
+}
+
+.legend-color.path {
+  background-color: #ffd43b;
+}
+
+@media (max-width: 768px) {
+  .pathfinding-visualizer {
+    padding: 1rem;
+  }
+  
+  .pathfinding-visualizer h1 {
+    font-size: 1.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+  }
+  
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
